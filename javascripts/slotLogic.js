@@ -47,6 +47,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
 			return;
 		}
 
+		if (bet > credits) {
+			message.innerText = "You can't bet more than you own!"
+			console.log(`You've run out of credits! Go sell your house to play more!`);
+			return;
+		}
+
 		if (bet === 0) {
 			message.innerText = "Place a bet!"
 			console.log(`Place a bet!`)
@@ -61,9 +67,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 		credits = credits - bet;
 
-		const slot1move = Math.ceil(Math.random() * 30) + 90;
-		const slot2move = Math.ceil(Math.random() * 30) + 60;
-		const slot3move = Math.ceil(Math.random() * 30) + 60;
+		const slot1move = Math.ceil(Math.random() * 60) + 60;
+		const slot2move = Math.ceil(Math.random() * 75) + 15;
+		const slot3move = Math.ceil(Math.random() * 75) + 15;
 
 		let setTime = 0;
 
