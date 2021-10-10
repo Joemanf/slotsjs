@@ -5,29 +5,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script type="text/javascript" src="javascripts/slotLogic.js"></script>
+		<link rel="stylesheet" href="css/index.css">
 		<title>Slots</title>
 	</head>
 	<body>
-		<div>
+		<div class="container">
 			<div>
 				Credits:
 				<p id="credits"></p>
 			</div>
 		</div>
-		<div>
-			<div id="slot1"></div>
-			<div id="slot2"></div>
-			<div id="slot3"></div>
+		<div class="container slots-container">
+			<div id="slot1" class="slot"></div>
+			<div id="slot2" class="slot"></div>
+			<div id="slot3" class="slot"></div>
 		</div>
-		<div>
+		<div class="container">
 			<div id="message">Place a bet!</div>
 		</div>
-		<div>
+		<div class="container">
 			<div>
 				<label>Insert Credits: </label>
 				<input type="number" id="creditInput" min="0" />
 			</div>
-			<div id="spin">SPIN!</div>
+		</div>
+		<div class="container">
+			<div id="spin" class="spin">SPIN!</div>
 		</div>
 	</body>
 </html>

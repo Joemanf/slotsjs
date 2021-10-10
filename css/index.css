@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.slots-container {
+    width: 22em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slot{
+    margin: 1em;
+    width: 5em;
+    text-align: center;
+}
+
+.spin {
+    margin-top: 1em;
+}
