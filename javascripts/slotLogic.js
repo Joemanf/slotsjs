@@ -11,6 +11,7 @@ let slot2 = slotPics2[1];
 let slot2index = 1
 let slot3 = slotPics3[2];
 let slot3index = 2
+let setSpinning = false;
 
 window.addEventListener('DOMContentLoaded', (e) => {
 	const creditsDisplay = document.getElementById('credits');
@@ -35,6 +36,10 @@ window.addEventListener('DOMContentLoaded', (e) => {
 	});
 
 	function spin(bet) {
+		if (setSpinning) {
+			return;
+		}
+		setSpinning = true;
 		bet = parseInt(bet)
 		if (credits <= 0) {
 			message.innerText = "You've run out of credits! Go sell your house to play more!"
@@ -151,6 +156,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
 			setTimeout(() => {
 				slot3display.innerText = `${slot3temp[0]}`;
 				slot3temp.shift();
+				if (i === slot3move - 1) {
+					setSpinning = false;
+				}
 			}, setTime)
 			setTime += 17;
 		}
