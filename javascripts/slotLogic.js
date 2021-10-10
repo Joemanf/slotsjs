@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
 		credits = credits - bet;
 
-		const slot1move = Math.ceil(Math.random() * 30) + 120;
+		const slot1move = Math.ceil(Math.random() * 30) + 90;
 		const slot2move = Math.ceil(Math.random() * 30) + 60;
 		const slot3move = Math.ceil(Math.random() * 30) + 60;
 

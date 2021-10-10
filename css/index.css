@@ -10,6 +10,10 @@
     justify-content: space-around;
 }
 
+.credits {
+    text-align: center;
+}
+
 .slot{
     margin: 1em;
     width: 5em;
@@ -18,4 +22,5 @@
 
 .spin {
     margin-top: 1em;
+    cursor: pointer;
 }
