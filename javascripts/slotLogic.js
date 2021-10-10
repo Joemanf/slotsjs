@@ -44,24 +44,28 @@ window.addEventListener('DOMContentLoaded', (e) => {
 		if (credits <= 0) {
 			message.innerText = "You've run out of credits! Go sell your house to play more!"
 			console.log(`You've run out of credits! Go sell your house to play more!`);
+			setSpinning = false;
 			return;
 		}
 
 		if (bet > credits) {
 			message.innerText = "You can't bet more than you own!"
 			console.log(`You've run out of credits! Go sell your house to play more!`);
+			setSpinning = false;
 			return;
 		}
 
 		if (bet === 0) {
 			message.innerText = "Place a bet!"
 			console.log(`Place a bet!`)
+			setSpinning = false;
 			return;
 		}
 
 		if (bet < 0) {
 			message.innerText = "You cannot cheat us. The house always wins."
 			console.log(`You cannot cheat us. The house always wins.`);
+			setSpinning = false;
 			return;
 		}
 
